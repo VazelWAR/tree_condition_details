@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Information</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            
+            background: url('Picture.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .form-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px; /* Increased padding for a better look */
+            border-radius: 30px; /* Adjusted border radius for a smoother appearance */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 180%; /* Adjusted width */
+            max-width: 500px; /* Max width */
+            text-align: left; /* Aligned text to the left */
+        }
+        
+        h1 {
+            text-align: center;
+            color: green;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select, textarea {
+            width: calc(100% - 20px); /* Adjusted width calculation */
+            padding: 10px;
+            margin-bottom: 15px; /* Decreased margin for a more compact look */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px; /* Increased font size */
+        }
+        
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Tree Information</h1>
+        <form>
+            <label for="commonName">Common Name:</label>
+            <input type="text" id="commonName" name="commonName" required>
+
+            <label for="girth">Girth (cm):</label>
+            <input type="number" id="girth" name="girth" required>
+
+            <label for="height">Height (m):</label>
+            <input type="number" id="height" name="height" required>
+
+            <label for="treeCondition">Tree Condition:</label>
+            <select id="treeCondition" name="treeCondition" required>
+                <option value="healthy">Healthy</option>
+                <option value="sick">Sick</option>
+                <option value="dead">Dead</option>
+            </select>
+
+            <label for="remarks">Remarks:</label>
+            <textarea id="remarks" name="remarks" rows="4"></textarea>
+
+            <label for="gpsCoordinates">GPS Coordinates:</label>
+            <input type="text" id="gpsCoordinates" name="gpsCoordinates" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
